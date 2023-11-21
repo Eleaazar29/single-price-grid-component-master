@@ -1,0 +1,126 @@
+:root{
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+}
+
+/*font-family: 'Karla', sans-serif;*/
+html {
+    background-color: var(--LightGray);
+}
+
+body{
+    width: 90%;
+    margin-inline: auto;
+    font-family: 'Karla', sans-serif;
+}
+
+.titulo{
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.titulo h2 {
+    font-size: 20px;
+    color: var(--Cyan);
+    
+}
+
+.titulo h3 {
+    color: var(--BrightYellow);
+    font-size: 18px;
+   
+}
+
+.titulo p{
+    color: var(--GrayishBlue);
+    line-height: 1.5rem;
+}
+
+.suscripcion {
+    background-color: var(--Cyan);
+    padding: 1.5rem 1rem;
+}
+
+.suscripcion h2{
+    margin-top: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.suscripcion p{
+    color: white;
+}
+
+p span{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.suscripcion h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: 0.3rem;
+    border-style: none;
+    color: white;
+    background-color: var(--BrightYellow);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 6px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+footer{
+    background-color: hsl(179, 61%, 50%);
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+footer h2{
+    margin: 0;
+    color: white;
+    margin-block: 1rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-block: 0.1rem;
+}
+
+@media (min-width:1440px){
+    body{
+        display: grid;
+        grid-template-areas:
+        'top top'
+        'left right';
+    }
+
+    .titulo{
+        grid-area: top;
+    }
+
+    .suscripcion{
+        grid-area: left;
+    }
+
+    .footer{
+        grid-area: right;
+    }
+}
